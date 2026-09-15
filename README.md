@@ -1,5 +1,5 @@
 <p align="right">
-  <a href="README.fa.md"> <strong>فارسی</strong></a>
+  <a href="README_FA.md"> <strong>فارسی</strong></a>
 </p>
 
 ---
@@ -32,12 +32,11 @@ Often, VPN clients, proxy tools (e.g., v2ray, Clash, Outline), anti-censorship s
 
 ## 🚀 How to Use
 
-1. Download or clone this repository.
-2. Make sure the script file is saved with the `.bat` extension (e.g., `Reset-DNS-Proxy.bat`).
-3. **Double-click** the script to run it.
-4. If prompted by **User Account Control (UAC)**, click **Yes**.
-5. The script will execute all steps automatically.
-6. Once you see `All tasks completed successfully.`, press any key to close the window.
+1. Make sure the script file is saved with the `.bat` extension (e.g., `Reset-DNS-Proxy.bat`).
+2. **Double-click** the script to run it.
+3. If prompted by **User Account Control (UAC)**, click **Yes**.
+4. The script will execute all steps automatically.
+5. Once you see `All tasks completed successfully.`, press any key to close the window.
 
 ---
 
