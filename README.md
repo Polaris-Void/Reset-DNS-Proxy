@@ -46,9 +46,3 @@ Often, VPN clients, proxy tools (e.g., v2ray, Clash, Outline), anti-censorship s
 - **OS:** Windows 8.1, Windows 10, or Windows 11 (32-bit & 64-bit).
 - **PowerShell:** Version 5.0 or later (pre-installed on Windows 10 & 11).
 - **Permissions:** Administrator access (requested automatically by the script).
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
