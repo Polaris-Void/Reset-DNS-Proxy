@@ -1,37 +1,51 @@
-# Reset DNS Proxy
+<p align="right">
+  <a href="README.fa.md"> <strong>فارسی</strong></a>
+</p>
 
-A lightweight, automated Windows Batch script designed to resolve internet connectivity issues by resetting DNS configurations to automatic (DHCP), disabling system proxies, and clearing the local DNS cache.
+---
 
-## Features
+# 🌐 Network Troubleshooter — DNS & Proxy Reset
 
-- **Automatic Privilege Elevation:** Prompts for Administrator rights (UAC) automatically if executed without elevation.
-- **DNS Configuration Reset:** Restores DNS settings to automatic (DHCP) across all network adapters via integrated PowerShell execution.
-- **System Proxy Disablement:** Clears system proxy settings in both `HKCU` and `HKLM` registry paths.
-- **DNS Cache Clearance:** Flushes the DNS resolver cache to enforce immediate network routing updates.
+A lightweight, automated Windows batch script designed to quickly resolve internet connectivity, DNS hijacking, and proxy routing issues with a single click.
 
-## Requirements
+---
 
-- Operating System: Windows 10 or Windows 11
-- User Privileges: Administrator access
+## 🧐 Why This Tool?
 
-## Installation and Execution
+One of the most common reasons for sudden internet loss in Windows occurs when:
+- A **VPN or proxy tool** crashes or is uninstalled while leaving the Windows system proxy turned on.
+- A custom, stale, or poisoned **DNS server** prevents domain names from resolving.
+- Windows keeps cached bad DNS records in the local resolver.
 
-1. Download the `Reset DNS Proxy.bat` file from the repository.
-2. Run the script:
-   - Double-click `Reset DNS Proxy.bat` and accept the UAC prompt, or
-   - Right-click the file and select **Run as administrator**.
-3. Wait for the execution process to complete and test your internet connection.
+This utility automates the entire repair process using **100% native Windows tools**—no third-party software required.
 
-> **Note:** If executing via Command Prompt (CMD), wrap the file name in quotation marks due to spaces:
-> ```cmd
-> "Reset DNS Proxy.bat"
-> ```
+---
 
-## Technical Details
+## ✨ Features
 
-The script executes the following operations in sequence:
+- 🔑 **Automatic Elevation:** Detects administrative privileges via `fsutil` and automatically requests UAC elevation if needed.
+- 🔄 **Universal DNS Reset:** Uses PowerShell's `NetTCPIP` cmdlets to automatically reset DNS addresses to default (DHCP) across **all** network adapters (Ethernet, Wi-Fi, etc.).
+- 🚫 **System-Wide Proxy Disable:** Clears and disables proxy configurations at both the **User** (`HKCU`) and **System-wide Machine** (`HKLM`) registry levels.
+- 🧹 **DNS Cache Flushing:** Flushes the Windows resolver cache (`ipconfig /flushdns`) to apply changes immediately without requiring a restart.
+- 🪶 **Zero Dependencies:** Pure Batch and native PowerShell; safe, clean, and portable.
 
-1. Checks administrative status using `fsutil dirty query %systemdrive%`.
-2. Invokes PowerShell to reset DNS client server addresses:
-   ```powershell
-   Get-NetAdapter | Set-DnsClientServerAddress -ResetServerAddresses
+---
+
+## 📋 System Requirements
+
+- **OS:** Windows 8.1, Windows 10, or Windows 11 (32-bit & 64-bit)
+- **PowerShell:** PowerShell 3.0 or higher (pre-installed on modern Windows)
+- **Permissions:** Administrative rights (requested automatically on launch)
+
+---
+
+## 🚀 How to Use
+
+1. Download or clone this repository.
+2. Double-click **`Reset-DNS-Proxy.bat`**.
+3. If prompted by **User Account Control (UAC)**, click **Yes** to grant administrative privileges.
+4. Wait a few seconds until you see:
+   ```text
+   ==============================================================
+                  All tasks completed successfully.
+   ==============================================================
