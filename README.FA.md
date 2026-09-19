@@ -1,7 +1,6 @@
 <div align="center">
 
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?logo=windows&logoColor=white)
-![Language](https://img.shields.io/badge/language-Batch%20%2B%20PowerShell-4EAA25?logo=powershell&logoColor=white)
 
 [English](README.md) | فارسی
 
