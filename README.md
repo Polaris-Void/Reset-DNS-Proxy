@@ -6,7 +6,6 @@
 English | [فارسی](README.FA.md)
 
 </div>
----
 
 # Network Troubleshooter: DNS & Proxy Reset
 
